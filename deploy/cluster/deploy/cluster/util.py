@@ -35,6 +35,7 @@ def replace_yaml_val(yaml_dict, name, val):
 def init_k8s():
     cfg = k8s.config
     cfg.load_kube_config()
+    # cfg.load_incluster_config()
     client = k8s.client.CoreV1Api()
     apps_client = k8s.client.AppsV1Api()
 

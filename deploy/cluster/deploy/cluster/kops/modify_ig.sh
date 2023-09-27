@@ -14,7 +14,7 @@
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
 
-if [ -z "$1" ] && [ -z "$2" ]; then
+if [[ -z "$1" ]] && [[ -z "$2" ]]; then
   echo "Usage: ./add_servers.sh node-type instance-count"
   echo "Valid node types are memory, ebs, benchmark, and routing."
   echo "If number of previous instances is not specified, it is assumed to be 0."

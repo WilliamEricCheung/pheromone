@@ -11,7 +11,8 @@
 #  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
-
+# 这个image超过两年时间窗导致aws不支持，需要更换成较新的
+#  image: kope.io/k8s-1.17-debian-stretch-amd64-hvm-ebs-2020-01-17
 apiVersion: kops/v1alpha2
 kind: InstanceGroup
 metadata:
@@ -19,7 +20,7 @@ metadata:
     kops.k8s.io/cluster: CLUSTER_NAME
   name: misc-instances
 spec:
-  image: kope.io/k8s-1.17-debian-stretch-amd64-hvm-ebs-2020-01-17
+  image: 099720109477/ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-amd64-server-20230711
   machineType: m5.large
   maxSize: 1
   minSize: 1
